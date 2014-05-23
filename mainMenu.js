@@ -19,12 +19,11 @@ BasicGame.MainMenu.prototype = {
     this.loadingText = this.add.text(510, 520, "Press Z or tap/click game to start", { font: "24px monospace", fill: "#fff" });
     this.loadingText.anchor.setTo(0.5, 0.5);
     this.add.text(510, 680, "image assets Copyright (c) 2002 Ari Feldman", { font: "16px monospace", fill: "#fff", align: "center"}).anchor.setTo(0.5, 0.5);
-    this.spaceButton = this.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
   },
 
   update: function () {
-    if (this.spaceButton.isDown) {
+    if (this.input.keyboard.isDown(Phaser.Keyboard.Z) || this.input.activePointer.isDown) {
       this.startGame();
     }
     //  Do some nice funky main menu effect here
