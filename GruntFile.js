@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         connect: {
             server: {
                 options: {
-                    port: 8080,
+                    port: 8000,
                     base: './deploy'
                 }
             }
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         },
         open: {
             dev: {
-                path: 'http://localhost:8080/index.html'
+                path: 'http://localhost:8000/index.html'
             }
         }
     });
